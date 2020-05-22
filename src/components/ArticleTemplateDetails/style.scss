@@ -2,10 +2,29 @@
 @import "../../assets/scss/mixins";
 
 .article-single {
+    padding-top: 400px;
     &__inner {
         max-width: $layout-article-single-max-width;
         padding: 0 15px;
         margin: 0 auto;
+    }
+    &__img {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        overflow: hidden;
+        height: 400px;
+        @include margin-bottom(1);
+        background: #222288;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
     &__title {
         font-size: $typographic-base-font-size * 2;

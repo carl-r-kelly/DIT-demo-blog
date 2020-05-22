@@ -11,6 +11,8 @@ class ArticleTemplateDetails extends React.Component {
     const article = this.props.data.allKontentItemArticle.nodes[0].elements
     const tags = article.tags.value
 
+    // console.log(article)
+
     const homeBlock = (
       <div>
         <Link className="article-single__home-button" to="/">
@@ -34,11 +36,20 @@ class ArticleTemplateDetails extends React.Component {
       </div>
     )
 
+    console.log(article.image.value[0].url)
+
     return (
       <div>
+        {
+          article.image.value[0].url.length > 0 &&
+            <div className="article-single__img">
+              <img  src={article.image.value[0].url} alt=""/>
+            </div>
+        }
         {homeBlock}
         <div className="article-single">
-          <div className="article-single__inner">
+          <div className="article-single__inner">            
+
             <h1 className="article-single__title">{article.title.value}</h1>
             <div
               className="article-single__body"

@@ -9,6 +9,8 @@ class ArticleTemplate extends React.Component {
     const title = this.props.data.kontentItemSiteMetadata.elements.title.value
     const article = this.props.data.allKontentItemArticle.nodes[0]
 
+    // console.log(this.props.data)
+
     return (
       <Layout>
         <div>
@@ -117,6 +119,11 @@ export const pageQuery = graphql`
                   }
                 }
               }
+            }
+          }
+          image {
+            value {
+              url
             }
           }
           title {

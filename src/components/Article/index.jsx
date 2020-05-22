@@ -19,7 +19,7 @@ class Article extends React.Component {
         {
           img.length > 0 &&
             <div className="article__img">
-              <img className="article__img" src={img} alt=""/>
+              <img src={img} alt=""/>
             </div>
         }
         <h2 className="article__title">
