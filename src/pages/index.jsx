@@ -12,6 +12,7 @@ class IndexRoute extends React.Component {
     const title = routeData.data.kontentItemSiteMetadata.elements.title.value
     const subtitle = routeData.data.kontentItemSiteMetadata.elements.subtitle.value
     const articles = routeData.data.allKontentItemArticle.nodes
+
     articles.forEach(article => {
       items.push(<Article data={article} key={article.elements.slug.value} />)
     })
@@ -88,6 +89,11 @@ export const pageQuery = graphql`
                   }
                 }
               }
+            }
+          }
+          image {
+            value {
+              url
             }
           }
           title {

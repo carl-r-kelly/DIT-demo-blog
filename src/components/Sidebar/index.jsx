@@ -94,7 +94,6 @@ const sidebar = () => {
                 src={profilePic}
                 className="sidebar__author-photo"
                 width="75"
-                height="75"
                 alt={author.name}
               />
             </Link>

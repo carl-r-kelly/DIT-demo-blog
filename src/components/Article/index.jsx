@@ -6,6 +6,7 @@ import './style.scss'
 
 class Article extends React.Component {
   render() {
+    const img = _.get(this.props, 'data.elements.image.value[0].url', '')
     const title = _.get(this.props, 'data.elements.title.value', 'N/A')
     const date = _.get(this.props, 'data.elements.date.value', 'N/A')
     const category = _.get(this.props, 'data.elements.category.value[0].elements.title.value', 'N/A')
@@ -15,6 +16,17 @@ class Article extends React.Component {
 
     return (
       <div className="article">
+        {
+          img.length > 0 &&
+            <div className="article__img">
+              <img className="article__img" src={img} alt=""/>
+            </div>
+        }
+        <h2 className="article__title">
+          <Link className="article__title-link" to={slug}>
+            {title}
+          </Link>
+        </h2>
         <div className="article__meta">
           <time
             className="article__meta-time"
@@ -29,11 +41,6 @@ class Article extends React.Component {
             </Link>
           </span>
         </div>
-        <h2 className="article__title">
-          <Link className="article__title-link" to={slug}>
-            {title}
-          </Link>
-        </h2>
         <p className="article__description">{description}</p>
         <Link className="article__readmore" to={slug}>
           Read
