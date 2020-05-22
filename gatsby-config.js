@@ -16,7 +16,7 @@ module.exports = {
     {
       resolve: '@kentico/gatsby-source-kontent',
       options: {
-        projectId: c2969274-1e1d-0158-4a00-88a8bc10a1cf, // Fill in your Project ID
+        projectId: 'c2969274-1e1d-0158-4a00-88a8bc10a1cf', // Fill in your Project ID
         // if false used authorization key for secured API
         usePreviewUrl: process.env.KONTENT_PREVIEW_ENABLED && process.env.KONTENT_PREVIEW_ENABLED.toLowerCase() === 'true',
         authorizationKey: process.env.KONTENT_PREVIEW_ENABLED && process.env.KONTENT_PREVIEW_ENABLED.toLowerCase() === 'true'
