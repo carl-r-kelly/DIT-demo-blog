@@ -32,7 +32,7 @@ class Article extends React.Component {
             className="article__meta-time"
             dateTime={moment(date).format('MMMM D, YYYY')}
           >
-            {moment(date).format('MMMM YYYY')}
+            {moment(date).format('D MMMM YYYY')}
           </time>
           <span className="article__meta-divider" />
           <span className="article__meta-category" key={categorySlug}>
