@@ -36,15 +36,20 @@
         @include margin-bottom(.75);
     }
     &__img {
+        display: block;
         width: 100%;
         position: relative;
         overflow: hidden;
         height: 200px;
         margin-bottom: 30px;
+        transition: opacity .3s ease;
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+        &:hover {
+            opacity: .8;
         }
     }
     &__meta {

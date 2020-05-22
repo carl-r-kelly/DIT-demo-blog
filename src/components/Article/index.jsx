@@ -18,9 +18,9 @@ class Article extends React.Component {
       <div className="article">
         {
           img.length > 0 &&
-            <div className="article__img">
+            <Link className="article__img" to={slug}>
               <img src={img} alt=""/>
-            </div>
+            </Link>
         }
         <h2 className="article__title">
           <Link className="article__title-link" to={slug}>
